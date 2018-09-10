@@ -18,6 +18,6 @@ public class HelloController {
 
     @GetMapping("/web")
     public String getExternal() {
-        return new RestTemplate().getForObject("https://elg.no", String.class);
+        return new RestTemplate().getForObject("https://elg.no", String.class).replace("elg.jpg", "https://elg.no/elg.jpg");
     }
 }
