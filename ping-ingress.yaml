@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ping-ingress
+  namespace: katalog-test
+spec:
+  rules:
+  - host: ping-katalog-test.k8s-test.oslo.kommune.no
+    http:
+      paths:
+      - backend:
+          serviceName: ping-service
+          servicePort: 8080
+  tls:
+  - hosts:
+    - ping-katalog-test.k8s-test.oslo.kommune.no
