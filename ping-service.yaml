@@ -9,5 +9,5 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app: ping-pod
+    app: node-ping-pod
   type: ClusterIP
