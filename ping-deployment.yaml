@@ -16,7 +16,7 @@ spec:
         app: ping-pod
     spec:
       containers:
-      - image: philipbhs/node-ping
+      - image: philipbhs/ping
         imagePullPolicy: Always
         name: ping-container
         ports:
